@@ -336,10 +336,6 @@ margin: 5rem;
   /* .tech-stack .wp-block-group__inner-container {
     display: flex;
   }*/
-
-  #post-14 .icons{
-    display: none;
-  }
 } 
 @media(min-width:93.75rem){
   .works{
