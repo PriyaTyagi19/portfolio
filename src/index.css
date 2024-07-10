@@ -220,10 +220,10 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: #272020;
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 	line-height: 1.5;
 }
 
@@ -239,7 +239,7 @@ h6 {
 
 .site-header {
 	text-align: center;
-	background-color: #eee;
+	box-shadow: 0px 0px 6px 0px #86a7b4;
 	padding: 0 1.25rem;
 	background-color: #000000;
 	position: fixed;
@@ -403,17 +403,17 @@ table {
 # Links
 --------------------------------------------------------------*/
 a {
-	color: hsl(197, 100%, 36%);
+	color: #65CFEC;
 }
 
 a:visited {
-	color: hsl(197, 100%, 36%);
+	color: #65CFEC;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: hsl(197, 100%, 20%);
+	color: #BF5700;
 }
 
 a:focus {
@@ -488,7 +488,7 @@ a:active {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-.clear:before,
+/* .clear:before,
 .clear:after,
 .entry-content:before,
 .entry-content:after,
@@ -512,7 +512,7 @@ a:active {
 .site-content:after,
 .site-footer:after {
 	clear: both;
-}
+} */
 
 /*--------------------------------------------------------------
 # Content
@@ -530,8 +530,9 @@ a:active {
 
 #main {
 	padding: 1.25rem;
-	margin: 0 auto;
-    min-height: 18.75rem;
+
+    /* margin-top: 8rem; */
+
 }
 
 #main article {
@@ -539,7 +540,7 @@ a:active {
 	margin-bottom: 5rem;
 }
 
-#main article::after {
+/* #main article::after {
 	content: '';
 	position: absolute;
 	bottom: -3rem;
@@ -550,7 +551,7 @@ a:active {
 	height: 1px;
 	margin: 0 auto;
 	background-color: #aaa;
-}
+} */
 
 #main .featured-works {
 	display: grid;
@@ -576,34 +577,13 @@ a:active {
 .site-navigation ul {
 	list-style: none;
 	margin: 0;
-	padding: 0 1.25rem 1rem;
-	text-align: left;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+	
+	
+	
 }
 
-.site-navigation a {
-	display: block;
-	padding: 1rem;
-	text-decoration: none;
-}
 
-.site-navigation a.active {
-	color: hsl(197, 100%, 20%);
-	text-decoration: underline;
-}
 
-footer {
-	padding: 1.25rem;
-	background-color: #000;
-	position: fixed;
-	bottom: 0;
-}
-
-footer p {
-	margin: 0;
-}
 
 .copyright {
 	font-size: .875rem;

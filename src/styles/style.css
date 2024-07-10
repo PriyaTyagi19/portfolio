@@ -1,31 +1,225 @@
-#main{
-    margin-top: 10rem;
-    /* background-color: #161313; */
-    color: #65CFEC;
-    background-image: radial-gradient(circle, #163137, #211d1d);
-    /* background-image: linear-gradient(to left,#266e82, #161313); */
-    min-height: 100vh;
-}
-
-
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
  
-.link-btn .navlink {
-    box-shadow: inset 0 0 0 0 #54b3d6;
-    color: #54b3d6;
-    padding: 0.5rem;
-    margin: 0 -.25rem;
-    border-radius: 20px;
-   
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-  }
-.link-btn .navlink:hover {
-    color: #000;
-    box-shadow: inset 120px 0 0 0 #BF5700;
-   
-  }
-.site-header img{
-   height: 8rem;
+
 }
-header nav{
-    display: none;
+
+#main {
+  flex-grow: 1;
+  color: #65CFEC;
+  background-image: radial-gradient(circle, #0C1C1C, #211d1d);
+  margin-top: 8rem;
+}
+
+#post-8 a {
+  display: block;
+  text-align: center;
+  width: 60%;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  box-shadow: inset -1px -1px 8px 0 #86a7b4;
+  color: #54b3d6;
+  margin: 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  background-color: #000;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+#post-8 a:hover {
+  color: #000;
+  box-shadow: inset 120px 0 0 35px #BF5700;
+  padding: 0.75rem;
+}
+
+.site-header img {
+  height: 8rem;
+}
+.logo {
+  padding-top: 2rem;
+}
+.avatar {
+  margin-bottom: 1rem;
+  box-shadow: 0px 0px 6px 0px #86a7b4;
+}
+
+.site-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+}
+
+.site-navigation ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+}
+
+.site-navigation img {
+  height: 2rem;
+  /* background-color: #54b3d6; */
+}
+
+/* .navlinks-icons{
+  display: flex;
+  flex-direction: column;
+} */
+/* .icons{
+  fill: #54b3d6;
+} */
+.wp-block-heading {
+
+  font-style: italic;
+  text-align: center;
+}
+.entry-content{
+  margin-top: 3.5rem;
+  padding: 0 1rem;
+}
+.entry-content ul {
+  background-color: #54b3d6;
+  color: #000;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  list-style-type: none;
+  border-style: outset;
+  max-width: 80%;
+    text-align: center;
+    padding: 2rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.entry-content ul li {
+  background-color: black;
+  border-radius: 20px;
+  color: #65CFEC;
+  text-align: center;
+  padding: 0.3rem 0.7rem;
+  margin: 0 0.5rem;
+}
+.site-navigation a {
+	display: block;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+.site-navigation a.active {
+	color: #BF5700;
+	
+}
+
+.site-navigation ul li a {
+  color: #65CFEC;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.site-navigation ul li a:hover{
+  background-color: #BF5700;
+  color: #000;
+}
+
+footer {
+  padding: 1.25rem;
+  background-image: radial-gradient(circle, #0C1C1C, #211d1d);
+  box-shadow: 0px 0px 6px 0px #86a7b4;
+  margin-bottom: 4.5rem;
+
+}
+
+
+footer p {
+  margin: 0;
+  color: #65CFEC;
+}
+
+.social-icons{
+  display: flex;
+    gap: 1rem;
+    justify-content: center;
+    
+}
+
+.social-icons img{
+  height: 2rem;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.email-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+
+}
+
+
+@media(min-width:50rem) {
+
+  #main {
+    padding-top: 10rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 15rem;
+  }
+
+  .entry-content{
+    margin-top: 1rem;
+  }
+
+  .entry-content ul{
+    max-width: 50%;
+   
+  }
+ 
+
+  .site-header {
+    height: 100%;
+    width: 15rem;
+    overflow-x: hidden;
+    display: block;
+  }
+
+  .site-navigation {
+
+    max-width: 15rem;
+    bottom: unset;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .site-navigation ul {
+    display: block;
+    margin-left: 1rem;
+  }
+
+  .site-navigation ul li a {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+  }
+
+  footer{
+    margin-bottom: 0;
+    margin-left: 15rem;
+  }
+  #post-8 a {
+    width: 20%;
+  }
 }
