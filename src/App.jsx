@@ -11,6 +11,8 @@ import abouticon from "../src/assets/abouticon.svg";
 import linkedinicon from "../src/assets/linkedinicon.svg";
 import githubicon from "../src/assets/github.svg";
 import logo from "../src/assets/logo.svg";
+import "animate.css";
+
 
 function App() {
   return (

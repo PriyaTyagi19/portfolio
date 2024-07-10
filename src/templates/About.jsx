@@ -37,3 +37,5 @@ const About = () => {
 }
 
 export default About
+
+// https://www.npmjs.com/package/react-helmet-async

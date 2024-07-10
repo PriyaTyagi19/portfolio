@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Loading from '../utilities/Loading';
+import AOS from'aos';
+import 'aos/dist/aos.css';
 import { restBase } from '../utilities/Utilities'; // Update this based on your actual utility setup
 const Posts = () => {
     const restPath = restBase + 'portfolio-work?_embed';
@@ -23,27 +25,35 @@ const Posts = () => {
             }
         };
         fetchData();
+
+        AOS.init({duration: 2000})
     }, [restPath]);
     return (
         <>
+         <h1>Works</h1>
             {isLoaded ? (
                 <>
                     {restData.map(post => (
-                        <article key={post.id} id={`post-${post.id}`}>
-                            <Link to={`/work/${post.slug}`}>
-                                <h2>{post.title.rendered}</h2>
-                            </Link>
+                        <article className="works" data-aos="fade-left" key={post.id} id={`post-${post.id}`}>
+                            <article>
+                            
                               {/* Render featured image if available */}
                               {post.acf['featured-image'] && (
                                 <FeaturedImage imageId={post.acf['featured-image']} altText={post.title.rendered} />
                             )}
+                            </article>
+                            <article className='work-section'>
+                            <Link to={`/work/${post.slug}`}>
+                                <h2>{post.title.rendered}</h2>
+                            </Link>
                             <div className="work-skills" dangerouslySetInnerHTML={{ __html: post.acf.skillset }}></div>
                             <div className="work-content" dangerouslySetInnerHTML={{ __html: post.acf.description }}></div>
                             <div className="work-url">
-                                <a href={post.acf['live-site']} target="_blank" rel="noopener noreferrer">
-                                    {post.acf['live-site']}
-                                </a>
+                            <Link to={`/work/${post.slug}`}>
+                            View Project
+                            </Link>
                             </div>
+                            </article>
                           
                         </article>
                     ))}

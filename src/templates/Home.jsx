@@ -24,20 +24,30 @@ const Home = () => {
     }, [restPath])
     
     return (
-        <>
+        <section>
         <h1 className='screen-reader-text'>HOME</h1>
+        
         { isLoaded ?
+        
             <article id={`post-${restData.id}`}>
                 
+                <div className="content animate__animated animate__bounceInDown">
+
                 <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
+                    </div> 
+                    <div className='link-style'>
+                    <NavLink  to='/work'>See my work</NavLink>
+                    <NavLink to='/about'>About me!</NavLink>
                     </div>
-                    <img src={image} alt="An avatar" className="avatar" id="avatar" />
-                    <NavLink className="link-btn" to='/work'>See my work</NavLink>
+                   
+                </div>
+                <img src={image} alt="An avatar" className="avatar" id="avatar" />
             </article>
+           
         : 
             <Loading /> 
         }
-        </>            
+        </section>            
     )
 }
 
