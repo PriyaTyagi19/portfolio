@@ -8,14 +8,41 @@
 
 #main {
   flex-grow: 1;
+  margin-top: 8.5rem;
+  /* color: #fff; */
   color: #65CFEC;
-  background-image: radial-gradient(circle, #0C1C1C, #211d1d);
-  margin-top: 8rem;
+  background-color: #000;
+  background-image:
+    radial-gradient(circle at -10% -10%, #14353d, transparent),
+
+    radial-gradient(circle at 80% 50%, #000, transparent),
+
+
+
+    linear-gradient(to top, #122d2d, #000),
+    linear-gradient(to left, #122d2d, #000);
+
+
+
+  background-size: 200% 100%;
+  animation: animatedBackground 10s ease infinite;
+
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 
 
-#post-8 a ,
+
+#post-8 .link-style a,
 .work-url a {
   display: block;
   text-align: center;
@@ -66,13 +93,6 @@
 
 }
 
-/* .navlinks-icons{
-  display: flex;
-  flex-direction: column;
-} */
-/* .icons{
-  fill: #54b3d6;
-} */
 .wp-block-heading {
 
   font-style: italic;
@@ -131,12 +151,20 @@
   height: 100%;
 }
 
-/* .site-navigation ul li a:hover{
+.site-navigation ul li a:hover {
   background-color: #BF5700;
   color: #000;
-} */
+}
+
+.site-navigation ul li a:hover svg path {
+
+  fill: #000;
+}
 
 
+.site-navigation ul li a:active svg path {
+  fill: #BF5700;
+}
 
 
 footer {
@@ -160,6 +188,11 @@ footer p {
 
 }
 
+.social-icons a:hover svg path {
+  fill: currentColor;
+
+}
+
 .social-icons img {
   height: 2rem;
   color: inherit;
@@ -176,43 +209,158 @@ footer p {
 }
 
 #post-14,
-#post-12
-{
+#post-12 {
   text-align: center;
 }
 
-.works{
+.works {
+
+  background-color: #192f36;
   margin-bottom: 3rem;
-  background-color:#202629;
-  box-shadow:  0rem 0rem 0.5rem 0rem #306071;
   padding: 1rem;
   border-radius: 10px;
 }
-.work-content{
+
+.work-content {
   display: none;
 }
-.work-skills ul{
-  
+
+.work-skills ul {
+
   margin: 1rem 0 1rem 0;
   display: flex;
   flex-wrap: wrap;
 
 }
 
-.work-skills ul li{
-list-style-type: none;
-display: inline;
-background-color: #54b3d6;
-color: #000;
-padding: 0.5rem;
-margin: 0.5rem;
-border-radius: 10px;
-font-size: 1rem;
+.work-skills ul li {
+  list-style-type: none;
+  display: inline;
+  border: solid 1px #67a8c0;
+  color: #54b3d6;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
 
 
 }
-.work-url{
+
+.work-url {
   margin-bottom: 1rem;
+}
+
+.work-section a h2,
+#rest-33 h2 {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.work-section a {
+
+  text-decoration: none;
+}
+
+
+
+.tech-stack-heading {
+  background-color: #000;
+  color: #54b3d6;
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+
+.react-tabs__tab-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid #54b3d6;
+  margin: 20px 0 10px;
+  padding: 0;
+}
+
+.react-tabs__tab {
+  border-bottom: none;
+  bottom: -1px;
+  cursor: pointer;
+  display: inline-block;
+  list-style: none;
+  padding: 6px 12px;
+  position: relative;
+  margin: 0 10px;
+  text-align: center;
+
+}
+
+.react-tabs__tab--selected {
+  background-color: #54b3d6;
+  border-radius: 5px 5px 0 0;
+  color: #101010;
+  font-weight: 600;
+
+}
+
+.react-tabs__tab-panel {
+  padding: 1rem 1rem 0;
+}
+
+.slider-container {
+
+  max-width: 100%;
+  padding: 20px;
+  text-align: center;
+  grid-column: 1/ 3;
+  align-items: center;
+
+}
+
+
+
+
+.slider-style {
+  border: 1px solid #101010;
+  background-color: #0C1C1C;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.slider-link a h2 {
+
+  font-size: 1rem;
+}
+
+.slick-dots li {
+  display: none;
+}
+
+
+
+@media (min-width: 36em) {
+  .react-tabs__tab-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .slider-container {
+    width: 70%;
+    margin: 5rem auto 0;
+
+  }
+
+  .slider-style img {
+    width: 80%;
+    margin: 0 5rem
+  }
+
+  a:hover {
+    color: #BF5700;
+  }
 }
 
 @media(min-width:50rem) {
@@ -234,11 +382,18 @@ font-size: 1rem;
   #post-8 {
     display: grid;
     grid-template-columns: 50% 50%;
-margin: 5rem;
+    margin: 5rem;
   }
 
+  .all-projects a {
+    width: 50%;
+  }
 
-  #post-8 a:hover {
+  .all-projects {
+    margin: 0.5rem auto;
+  }
+
+  #post-8 .link-style a:hover {
     color: #000;
     box-shadow: inset 120px 0 0 35px #BF5700;
     padding: 0.5rem;
@@ -248,8 +403,13 @@ margin: 5rem;
     margin-top: 1rem;
   }
 
-  
+  .react-tabs {
+    margin: 2rem 7rem;
+  }
 
+  a:hover {
+    color: #BF5700;
+  }
 
   .site-header {
     height: 100%;
@@ -262,7 +422,7 @@ margin: 5rem;
 
     max-width: 15rem;
     bottom: unset;
-    top: 40%;
+    top: 50%;
     transform: translateY(-50%);
   }
 
@@ -284,65 +444,47 @@ margin: 5rem;
     margin-left: 15rem;
   }
 
- 
 
-  .site-navigation ul li a:hover {
-    animation: anim2 500ms cubic-bezier(0.175, 0.885, 0.32, 0.275) infinite;
-    /* color:#BF5700 ; */
+  .tech-stack {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
   }
 
-  @keyframes anim2 {
-    0% {
-      opacity: 1;
-      transform: translateY(px);
-    }
-
-    25% {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-
-    50% {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-
-    75% {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-  .work-content{
+  .work-content {
     display: block;
   }
-  
-  .work-url{
+
+  .work-url {
     width: 40%;
   }
-  .work-section{
+
+  .work-section {
     width: 60%;
   }
-  .link-style{
+
+  .link-style {
     display: flex;
   }
-.entry-content ul{
-  max-width: 100%;
+
+  .entry-content ul {
+    max-width: 100%;
+  }
+
+  .feature-image img {
+    width: 50rem;
+    height: auto;
+  }
 }
-  /* .tech-stack .wp-block-group__inner-container {
-    display: flex;
-  }*/
-} 
-@media(min-width:93.75rem){
-  .works{
+
+@media(min-width:64rem) {
+  .works {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#181c1f;
+    background-color: #181c1f;
     margin: 5rem;
+    gap: 2rem
   }
 }
