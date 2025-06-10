@@ -43,7 +43,7 @@ const Post = () => {
                 />
               )}
             </div>
-
+          
             <div
               className="work-skills"
               dangerouslySetInnerHTML={{ __html: restData.acf.skillset }}
@@ -52,6 +52,8 @@ const Post = () => {
               className="single-work-content"
               dangerouslySetInnerHTML={{ __html: restData.acf.description }}
             ></div>
+           
+            
             <div className="work-url link-style">
               <a
                 href={restData.acf["live-site"]}

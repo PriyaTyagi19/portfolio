@@ -237,17 +237,7 @@ h6 {
 	clear: both;
 }
 
-.site-header {
-	text-align: center;
-	box-shadow: 0px 0px 6px 0px #86a7b4;
-	padding: 0 1.25rem;
-	background-color: #000000;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1;
-}
+
 
 p.site-title {
 	font-size: 3rem;
@@ -422,12 +412,12 @@ a:active {
 }
 
 a:focus {
-	outline: thin dotted;
+	color: #BF5700;
 }
 
 a:hover,
 a:active {
-	outline: 0;
+	color: #BF5700;
 }
 
 /*--------------------------------------------------------------

@@ -7,7 +7,7 @@ import Loading from "../utilities/Loading";
 import { restBase } from "../utilities/Utilities";
 
 const Slideshow = () => {
-  const [projects, setProjects] = useState([]);
+
 
   const restPath = restBase + "portfolio-work?_embed";
   const [restData, setData] = useState([]);

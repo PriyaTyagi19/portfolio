@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const restPath = restBase + "pages/8";
+  console.log("Endpoint URL is:", restPath);
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -17,7 +18,11 @@ const Home = () => {
       if (response.ok) {
         const data = await response.json();
         setData(data);
-        setLoadStatus(true);
+     
+        setTimeout( () => {
+          
+          setLoadStatus(true);
+        }, 100);
       } else {
         setLoadStatus(false);
       }

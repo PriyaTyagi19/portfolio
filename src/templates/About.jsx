@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Loading from "../utilities/Loading";
 import { restBase } from "../utilities/Utilities";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Helmet } from "react-helmet-async";
 
 const About = () => {
@@ -14,7 +15,10 @@ const About = () => {
       if (response.ok) {
         const data = await response.json();
         setData(data);
-        setLoadStatus(true);
+        setTimeout( () => {
+          
+          setLoadStatus(true);
+        }, 500)
       } else {
         setLoadStatus(false);
       }
@@ -38,56 +42,66 @@ const About = () => {
               className="entry-content"
               dangerouslySetInnerHTML={{ __html: restData.content.rendered }}
             ></div>
-            <article className="tech-stack">
-              <div>
+
+            <Tabs>
+              <TabList>
+                <Tab>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: restData.acf.heading1 }}
+                  ></div>
+                </Tab>
+                <Tab>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: restData.acf.heading2 }}
+                  ></div>
+                </Tab>
+                <Tab>
+                  {" "}
+                  <div
+                    dangerouslySetInnerHTML={{ __html: restData.acf.heading3 }}
+                  ></div>
+                </Tab>
+                <Tab>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: restData.acf.heading4 }}
+                  ></div>
+                </Tab>
+              </TabList>
+
+              <TabPanel>
                 <div
-                  className="tech-stack-heading"
-                  dangerouslySetInnerHTML={{ __html: restData.acf.heading1 }}
-                ></div>
-                <div
-                  className="work-skills"
+                  className="work-skills about-skills"
                   dangerouslySetInnerHTML={{
                     __html: restData.acf.content_section1,
                   }}
                 ></div>
-              </div>
-              <div>
+              </TabPanel>
+              <TabPanel>
                 <div
-                  className="tech-stack-heading"
-                  dangerouslySetInnerHTML={{ __html: restData.acf.heading2 }}
-                ></div>
-                <div
-                  className="work-skills"
+                  className="work-skills about-skills"
                   dangerouslySetInnerHTML={{
                     __html: restData.acf.content_section2,
                   }}
                 ></div>
-              </div>
-              <div>
+              </TabPanel>
+              <TabPanel>
                 <div
-                  className="tech-stack-heading"
-                  dangerouslySetInnerHTML={{ __html: restData.acf.heading3 }}
-                ></div>
-                <div
-                  className="work-skills"
+                  className="work-skills about-skills"
                   dangerouslySetInnerHTML={{
                     __html: restData.acf.content_section3,
                   }}
                 ></div>
-              </div>
-              <div>
+              </TabPanel>
+              <TabPanel>
                 <div
-                  className="tech-stack-heading"
-                  dangerouslySetInnerHTML={{ __html: restData.acf.heading4 }}
-                ></div>
-                <div
-                  className="work-skills"
+                  className="work-skills about-skills"
                   dangerouslySetInnerHTML={{
                     __html: restData.acf.content_section4,
                   }}
                 ></div>
-              </div>
-            </article>
+              </TabPanel>
+            </Tabs>
+
           </article>
         </>
       ) : (

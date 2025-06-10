@@ -1,4 +1,4 @@
-import loading from '../assets/loading.gif';
+import loading from '../assets/gif.gif';
 
 const Loading = () => {
     

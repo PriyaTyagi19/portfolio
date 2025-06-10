@@ -14,8 +14,10 @@ const Connect = () => {
       if (response.ok) {
         const data = await response.json();
         setData(data);
+        setTimeout ( () => {
         setLoadStatus(true);
-      } else {
+      }, 500);
+     } else {
         setLoadStatus(false);
       }
     };
