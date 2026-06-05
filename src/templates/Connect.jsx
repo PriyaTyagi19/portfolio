@@ -4,7 +4,7 @@ import { restBase } from "../utilities/Utilities";
 import { Helmet } from "react-helmet-async";
 
 const Connect = () => {
-  const restPath = restBase + "pages/14";
+  const restPath = restBase + "pages/18";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -16,7 +16,7 @@ const Connect = () => {
         setData(data);
         setTimeout ( () => {
         setLoadStatus(true);
-      }, 500);
+      }, 100);
      } else {
         setLoadStatus(false);
       }

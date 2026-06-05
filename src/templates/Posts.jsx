@@ -20,7 +20,7 @@ const Posts = () => {
           setTimeout( () => {
           
             setLoadStatus(true);
-          }, 500)
+          }, 100)
         } else {
           throw new Error("Failed to fetch data");
         }

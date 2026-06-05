@@ -7,7 +7,7 @@ import Slideshow from "../components/Slideshow";
 import { Helmet } from "react-helmet-async";
 
 const Home = () => {
-  const restPath = restBase + "pages/8";
+  const restPath = restBase + "pages/11";
   console.log("Endpoint URL is:", restPath);
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);

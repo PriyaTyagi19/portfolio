@@ -38,6 +38,9 @@
 #main {
   flex-grow: 2;
   margin-top: 8.5rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  
 }
 
 @keyframes animatedBackground {
@@ -59,7 +62,7 @@ height: 70vh;
 
 }
 
-#post-8 .link-style a,
+#post-11 .link-style a,
 .work-url a {
   display: block;
   text-align: center;
@@ -67,18 +70,18 @@ height: 70vh;
   font-size: 1.25rem;
   padding: 0.5rem;
   box-shadow: inset -1px -1px 8px 0 #86a7b4;
-  margin: 1rem;
+  margin: 1rem auto;
   border-radius: 20px;
   text-decoration: none;
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-#light #post-8 .link-style a,
+#light #post-11 .link-style a,
 #light .work-url a {
   background-color: #54b3d6;
   color: #000;
 }
-#dark #post-8 .link-style a,
+#dark #post-11 .link-style a,
 #dark .work-url a {
   background-color: #000;
   color: #54b3d6;
@@ -163,6 +166,7 @@ height: 70vh;
 
   font-style: italic;
   text-align: center;
+ 
 }
 
 .entry-content {
@@ -323,8 +327,11 @@ footer p {
 }
 
 #post-14,
-#post-12 {
-  text-align: center;
+#post-18 {
+  text-align: left;
+  p{
+    font-size: 1.15rem;
+  }
 }
 
 .works {
@@ -403,18 +410,14 @@ footer p {
   text-align: center;
 }
 
-#post-12 .react-tabs__tab-list {
+#post-14 .react-tabs__tab-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin: 0;
   padding: 0;
   border-radius: 0.75rem;
 }
-#dark .about-skills  ul li{
-  
-  background-color: #000;
-  color: #5fa6c0;
-}
+#dark .about-skills  ul li,
 #light .about-skills  ul li{
  
   background-color: #000;
@@ -447,7 +450,7 @@ footer p {
 
   background-color: #5fa6c0; 
    color: #000000;
-  border-radius: 10px 10px 0 0;
+ 
   font-weight: 600;
 }
 
@@ -498,9 +501,9 @@ footer p {
 
 
 @media (min-width: 36em) {
-  #post-12 .react-tabs__tab-list {
+  #post-14 .react-tabs__tab-list {
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     
   }
 
@@ -522,12 +525,12 @@ footer p {
 
   
 
-  #dark #post-8 .link-style a:hover,
+  #dark #post-11.link-style a:hover,
 #dark .work-url a:hover {
   background-color: #BF5700;
   color: #000;
 }
-  #light #post-8 .link-style a:hover,
+  #light #post-11 .link-style a:hover,
 #light .work-url a:hover {
   background-color: #BF5700;
   color: #000;
@@ -545,13 +548,16 @@ footer p {
   }
 
   #post-14,
-  #post-12,
-  #post-8 {
+  #post-18,
+  #post-11 {
     margin: 7rem;
     text-align: left;
+    p{
+      font-size: 1.25rem;
+    }
   }
 
-  #post-8 {
+  #post-11 {
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 5rem;
@@ -565,7 +571,7 @@ footer p {
     margin: 0.5rem auto;
   }
 
-  #post-8 .link-style a:hover {
+  #post-11 .link-style a:hover {
     color: #000;
     box-shadow: inset 120px 0 0 35px #BF5700;
     padding: 0.5rem;

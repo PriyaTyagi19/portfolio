@@ -5,7 +5,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Helmet } from "react-helmet-async";
 
 const About = () => {
-  const restPath = restBase + "pages/12";
+  const restPath = restBase + "pages/14";
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -18,7 +18,7 @@ const About = () => {
         setTimeout( () => {
           
           setLoadStatus(true);
-        }, 500)
+        }, 100)
       } else {
         setLoadStatus(false);
       }
@@ -56,23 +56,19 @@ const About = () => {
                   ></div>
                 </Tab>
                 <Tab>
-                  {" "}
+                 
                   <div
                     dangerouslySetInnerHTML={{ __html: restData.acf.heading3 }}
                   ></div>
                 </Tab>
-                <Tab>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: restData.acf.heading4 }}
-                  ></div>
-                </Tab>
+                
               </TabList>
 
               <TabPanel>
                 <div
                   className="work-skills about-skills"
                   dangerouslySetInnerHTML={{
-                    __html: restData.acf.content_section1,
+                    __html: restData.acf.section1,
                   }}
                 ></div>
               </TabPanel>
@@ -80,7 +76,7 @@ const About = () => {
                 <div
                   className="work-skills about-skills"
                   dangerouslySetInnerHTML={{
-                    __html: restData.acf.content_section2,
+                    __html: restData.acf.section2,
                   }}
                 ></div>
               </TabPanel>
@@ -88,18 +84,11 @@ const About = () => {
                 <div
                   className="work-skills about-skills"
                   dangerouslySetInnerHTML={{
-                    __html: restData.acf.content_section3,
+                    __html: restData.acf.section3,
                   }}
                 ></div>
               </TabPanel>
-              <TabPanel>
-                <div
-                  className="work-skills about-skills"
-                  dangerouslySetInnerHTML={{
-                    __html: restData.acf.content_section4,
-                  }}
-                ></div>
-              </TabPanel>
+              
             </Tabs>
 
           </article>
