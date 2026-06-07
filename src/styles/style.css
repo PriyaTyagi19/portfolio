@@ -1,11 +1,10 @@
-
-.theme-style{
+.theme-style {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 /* light theme */
-#light{
+#light {
   color: #000000;
   background-color: #ffffff;
   background-image:
@@ -13,34 +12,31 @@
   radial-gradient(circle at 80% 50%, #436763, transparent),
   linear-gradient(to top, #859aa0, #436763),
   linear-gradient(to left, #859aa0, #436763); */
-  radial-gradient(circle at -10% -10%, #acd5e1, transparent),
-  radial-gradient(circle at 80% 50%, #ece3e3, transparent),
-  linear-gradient(to top, #acd5e1, #ece3e3),
-  linear-gradient(to left, #acd5e1, #ece3e3);
+    radial-gradient(circle at -10% -10%, #acd5e1, transparent),
+    radial-gradient(circle at 80% 50%, #ece3e3, transparent),
+    linear-gradient(to top, #acd5e1, #ece3e3),
+    linear-gradient(to left, #acd5e1, #ece3e3);
   background-size: 200% 100%;
   animation: animatedBackground 10s ease infinite;
 }
 
 /* dark theme */
 #dark {
-  color: #65CFEC;
+  color: #65cfec;
   background-color: #000;
   background-image:
-  radial-gradient(circle at -10% -10%, #14353d, transparent),
-  radial-gradient(circle at 80% 50%, #000, transparent),
-  linear-gradient(to top, #122d2d, #000),
-  linear-gradient(to left, #122d2d, #000);
+    radial-gradient(circle at -10% -10%, #14353d, transparent),
+    radial-gradient(circle at 80% 50%, #000, transparent),
+    linear-gradient(to top, #122d2d, #000),
+    linear-gradient(to left, #122d2d, #000);
   background-size: 200% 100%;
   animation: animatedBackground 10s ease infinite;
 }
 
-
 #main {
   flex-grow: 2;
   margin-top: 8.5rem;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
-  
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @keyframes animatedBackground {
@@ -53,13 +49,11 @@
   }
 }
 
-
-.loading{
+.loading {
   display: flex;
-justify-content: center;
-align-items: center;
-height: 70vh;
-
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
 }
 
 #post-11 .link-style a,
@@ -73,7 +67,9 @@ height: 70vh;
   margin: 1rem auto;
   border-radius: 20px;
   text-decoration: none;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  transition:
+    color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 #light #post-11 .link-style a,
@@ -88,33 +84,31 @@ height: 70vh;
 }
 
 .site-header {
-	text-align: center;
-	box-shadow: 0px 0px 6px 0px #698c9a;
-	padding: 0 1.25rem;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1;
- 
+  text-align: center;
+  box-shadow: 0px 0px 6px 0px #698c9a;
+  padding: 0 1.25rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
-#light .site-header{
+#light .site-header {
   background-color: #acd5e1;
 }
 
-#dark .site-header{
+#dark .site-header {
   background-color: #000;
 }
-.logo-theme{
+.logo-theme {
   display: flex;
   align-items: baseline;
   justify-content: space-around;
 }
-.theme-change{
+.theme-change {
   cursor: pointer;
-  
-  }
+}
 .site-header img {
   height: 8rem;
 }
@@ -125,15 +119,12 @@ height: 70vh;
 
 .avatar {
   margin-bottom: 1rem;
- 
 }
 
 #light .avatar {
-
   box-shadow: 0px 0px 6px 0px #0f769f;
 }
 #dark .avatar {
-
   box-shadow: 0px 0px 6px 0px #86a7b4;
 }
 
@@ -142,31 +133,26 @@ height: 70vh;
   bottom: 0;
   left: 0;
   right: 0;
-
 }
 
-#light .site-navigation{
+#light .site-navigation {
   background-color: #acd5e1;
 }
-#dark .site-navigation{
+#dark .site-navigation {
   background-color: #000;
 }
 .site-navigation ul {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-
 }
 
 .site-navigation img {
   height: 2rem;
-
 }
 
 .wp-block-heading {
-
   font-style: italic;
   text-align: center;
- 
 }
 
 .entry-content {
@@ -195,7 +181,7 @@ height: 70vh;
 .entry-content ul li {
   background-color: black;
   border-radius: 20px;
-  color: #65CFEC;
+  color: #65cfec;
   text-align: center;
   padding: 0.3rem 0.7rem;
   margin: 0 0.5rem;
@@ -208,16 +194,13 @@ height: 70vh;
 }
 
 #light .site-navigation ul li a.active {
-  color: #BF5700;
-
+  color: #bf5700;
 }
 #dark .site-navigation ul li a.active {
-  color: #BF5700;
-
+  color: #bf5700;
 }
 
 .site-navigation ul li a {
- 
   font-size: 1rem;
   display: flex;
   flex-direction: column;
@@ -225,90 +208,81 @@ height: 70vh;
   height: 100%;
 }
 #light .site-navigation ul li a {
-  color:#000;
+  color: #000;
 }
 #dark .site-navigation ul li a {
-  color: #65CFEC;
+  color: #65cfec;
 }
 
 #light .site-navigation ul li a:hover {
-  background-color: #BF5700;
+  background-color: #bf5700;
   color: #000;
 }
 #dark .site-navigation ul li a:hover {
-  background-color: #BF5700;
+  background-color: #bf5700;
   color: #000;
 }
 #light .site-navigation ul li a svg path {
-  fill:#000;
+  fill: #000;
 }
 #dark .site-navigation ul li a svg path {
-  fill:#54b3d6;
+  fill: #54b3d6;
 }
 
 #light .site-navigation ul li a.active svg path {
-
-  fill: #BF5700;
+  fill: #bf5700;
 }
 #dark .site-navigation ul li a.active svg path {
-
-  fill: #BF5700;
+  fill: #bf5700;
 }
 
 #light .site-navigation ul li a:hover svg path {
-
   fill: #000;
 }
 #dark .site-navigation ul li a:hover svg path {
-
   fill: #000;
 }
-
 
 footer {
   padding: 1.25rem;
   box-shadow: 0px 0px 6px 0px #86a7b4;
   margin-bottom: 4.5rem;
 }
-#light footer{
+#light footer {
   background-image: radial-gradient(circle, #acd5e1, #ece3e3);
 }
-#dark footer{
-  background-image: radial-gradient(circle, #0C1C1C, #211d1d);
+#dark footer {
+  background-image: radial-gradient(circle, #0c1c1c, #211d1d);
 }
 
 footer p {
   margin: 0;
 }
 
-#light footer p{
-  color:#000;
+#light footer p {
+  color: #000;
 }
-#dark footer p{
-  color: #65CFEC;
+#dark footer p {
+  color: #65cfec;
 }
 
 .social-icons {
   display: flex;
   gap: 1rem;
   justify-content: center;
-
 }
-#light .social-icons a svg path{
-  fill:#000;
+#light .social-icons a svg path {
+  fill: #000;
 }
-#dark .social-icons a svg path{
-  fill:#54b3d6;
+#dark .social-icons a svg path {
+  fill: #54b3d6;
 }
-
 
 #light .social-icons a:hover svg path {
   fill: currentColor;
-
 }
 #dark .social-icons a:hover svg path {
   fill: currentColor;
-
 }
 
 .social-icons img {
@@ -323,33 +297,26 @@ footer p {
   justify-content: center;
   align-items: center;
   margin: 2rem;
-
 }
 
 #post-14,
 #post-18 {
   text-align: left;
-  p{
+  p {
     font-size: 1.15rem;
   }
 }
 
 .works {
-
- 
   margin-bottom: 3rem;
   padding: 1rem;
   border-radius: 10px;
 }
 #light .works {
-
   background-color: #e1e6e7;
- 
 }
 #dark .works {
-
   background-color: #192f36;
- 
 }
 
 .work-content {
@@ -357,11 +324,9 @@ footer p {
 }
 
 .work-skills ul {
-
   margin: 1rem 0 1rem 0;
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .work-skills ul li {
@@ -369,13 +334,12 @@ footer p {
   display: inline;
   border-radius: 10px;
   padding: 0.5rem;
-  margin: 0.5rem;
+  margin: 0.5rem 1rem;
   border-radius: 10px;
   font-size: 1rem;
 }
 
 #light .work-skills ul li {
- 
   border: solid 2px #000000;
   color: #000000;
 }
@@ -387,6 +351,9 @@ footer p {
 .work-url {
   margin-bottom: 1rem;
 }
+.single-work-content{
+  margin: 0.5rem 1rem;
+}
 
 .work-section a h2,
 #rest-33 h2 {
@@ -396,11 +363,8 @@ footer p {
 }
 
 .work-section a {
-
   text-decoration: none;
 }
-
-
 
 .tech-stack-heading {
   background-color: #000;
@@ -417,9 +381,8 @@ footer p {
   padding: 0;
   border-radius: 0.75rem;
 }
-#dark .about-skills  ul li,
-#light .about-skills  ul li{
- 
+#dark .about-skills ul li,
+#light .about-skills ul li {
   background-color: #000;
   color: #5fa6c0;
 }
@@ -443,18 +406,16 @@ footer p {
   text-align: center;
   background-color: #144557;
   font-size: 1rem;
-  
 }
 
 .react-tabs__tab--selected {
+  background-color: #5fa6c0;
+  color: #000000;
 
-  background-color: #5fa6c0; 
-   color: #000000;
- 
   font-weight: 600;
 }
 
-.react-tabs__tab--selected:focus-visible{
+.react-tabs__tab--selected:focus-visible {
   outline: none;
 }
 
@@ -465,19 +426,15 @@ footer p {
   padding: 1rem;
 }
 
-
 .slider-container {
-
   max-width: 100%;
   padding: 20px;
   text-align: center;
   grid-column: 1/ 3;
   align-items: center;
-
 }
 
 .slider-style {
- 
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -486,11 +443,9 @@ footer p {
 #light .slider-style {
   border: none;
   background-color: transparent;
- 
 }
 
 .slider-link a h2 {
-
   font-size: 1rem;
 }
 
@@ -498,48 +453,42 @@ footer p {
   display: none;
 }
 
-
-
 @media (min-width: 36em) {
   #post-14 .react-tabs__tab-list {
-
     grid-template-columns: repeat(3, 1fr);
-    
   }
 
-.react-tabs{
-  margin: 2rem auto;
-  width: 70%;
-  padding: 1rem;
-}
+  .react-tabs {
+    margin: 2rem auto;
+    width: 70%;
+    padding: 1rem;
+  }
   .slider-container {
     width: 70%;
     margin: 5rem auto 0;
-
   }
 
   .slider-style img {
     width: 80%;
-    margin: 0 5rem
+    margin: 0 5rem;
   }
 
-  
-
   #dark #post-11.link-style a:hover,
-#dark .work-url a:hover {
-  background-color: #BF5700;
-  color: #000;
-}
+  #dark .work-url a:hover {
+    background-color: #bf5700;
+    color: #000;
+  }
   #light #post-11 .link-style a:hover,
-#light .work-url a:hover {
-  background-color: #BF5700;
-  color: #000;
+  #light .work-url a:hover {
+    background-color: #bf5700;
+    color: #000;
+  }
+  .featured-image {
+    margin: 2rem;
+  }
 }
 
-}
-
-@media(min-width:50rem) {
-
+@media (min-width: 50rem) {
   #main {
     padding-top: 10rem;
     margin-top: 0;
@@ -552,7 +501,7 @@ footer p {
   #post-11 {
     margin: 7rem;
     text-align: left;
-    p{
+    p {
       font-size: 1.25rem;
     }
   }
@@ -573,10 +522,9 @@ footer p {
 
   #post-11 .link-style a:hover {
     color: #000;
-    box-shadow: inset 120px 0 0 35px #BF5700;
+    box-shadow: inset 120px 0 0 35px #bf5700;
     padding: 0.5rem;
   }
-  
 
   .entry-content {
     margin-top: 1rem;
@@ -587,7 +535,7 @@ footer p {
   }
 
   a:hover {
-    color: #BF5700;
+    color: #bf5700;
   }
 
   .site-header {
@@ -598,7 +546,6 @@ footer p {
   }
 
   .site-navigation {
-
     max-width: 15rem;
     bottom: unset;
     top: 50%;
@@ -623,12 +570,10 @@ footer p {
     margin-left: 15rem;
   }
 
-
   .tech-stack {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-
   }
 
   .work-content {
@@ -655,19 +600,18 @@ footer p {
     width: 50rem;
     height: auto;
   }
+  .featured-image {
+    margin: 5rem;
+  }
 }
 
-@media(min-width:64rem) {
+@media (min-width: 64rem) {
   .works {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #181c1f;
     margin: 5rem;
-    gap: 2rem
+    gap: 2rem;
   }
-
- 
 }
-
-
