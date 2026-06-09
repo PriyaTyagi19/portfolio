@@ -53,7 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 50vh;
 }
 
 #post-11 .link-style a,
@@ -86,7 +86,7 @@
 .site-header {
   text-align: center;
   box-shadow: 0px 0px 6px 0px #698c9a;
-  padding: 0 1.25rem;
+  padding:  1.25rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -303,7 +303,7 @@ footer p {
 #post-18 {
   text-align: left;
   p {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -351,9 +351,7 @@ footer p {
 .work-url {
   margin-bottom: 1rem;
 }
-.single-work-content{
-  margin: 0.5rem 1rem;
-}
+
 
 .work-section a h2,
 #rest-33 h2 {
@@ -374,13 +372,6 @@ footer p {
   text-align: center;
 }
 
-#post-14 .react-tabs__tab-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 0;
-  padding: 0;
-  border-radius: 0.75rem;
-}
 #dark .about-skills ul li,
 #light .about-skills ul li {
   background-color: #000;
@@ -452,6 +443,7 @@ footer p {
 .slick-dots li {
   display: none;
 }
+
 
 @media (min-width: 36em) {
   #post-14 .react-tabs__tab-list {
@@ -569,15 +561,21 @@ footer p {
     margin-bottom: 0;
     margin-left: 15rem;
   }
-
-  .tech-stack {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+.single-post-page{
+  width: 70%;
+  margin: auto;
+  .single-page-tabs{
+    ul li{
+      font-size: 1.05rem;
+    }
   }
+}
+ 
 
   .work-content {
     display: block;
+    font-size: 1.05rem;
+   
   }
 
   .work-url {
@@ -606,6 +604,14 @@ footer p {
 }
 
 @media (min-width: 64rem) {
+   .site-header {
+    width: 20rem;
+  }
+  .project-page , .about-page, .connect-page{
+    width: 75%;
+    margin: 0 auto;
+  }
+
   .works {
     display: flex;
     justify-content: space-between;
@@ -614,4 +620,5 @@ footer p {
     margin: 5rem;
     gap: 2rem;
   }
+  
 }

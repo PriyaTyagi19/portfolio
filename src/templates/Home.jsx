@@ -22,7 +22,7 @@ const Home = () => {
         setTimeout( () => {
           
           setLoadStatus(true);
-        }, 100);
+        }, 500);
       } else {
         setLoadStatus(false);
       }

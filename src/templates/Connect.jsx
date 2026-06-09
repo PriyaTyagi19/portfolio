@@ -16,7 +16,7 @@ const Connect = () => {
         setData(data);
         setTimeout ( () => {
         setLoadStatus(true);
-      }, 100);
+      }, 500);
      } else {
         setLoadStatus(false);
       }
@@ -25,7 +25,7 @@ const Connect = () => {
   }, [restPath]);
 
   return (
-    <>
+    <div className="connect-page">
       <a class="screen-reader-text" href="#site-main">
         Skip to content
       </a>
@@ -87,7 +87,7 @@ const Connect = () => {
       ) : (
         <Loading />
       )}
-    </>
+    </div>
   );
 };
 

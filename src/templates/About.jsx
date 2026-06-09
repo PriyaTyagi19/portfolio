@@ -18,7 +18,7 @@ const About = () => {
         setTimeout( () => {
           
           setLoadStatus(true);
-        }, 100)
+        }, 500)
       } else {
         setLoadStatus(false);
       }
@@ -27,7 +27,7 @@ const About = () => {
   }, [restPath]);
 
   return (
-    <>
+    <div className="about-page">
       <a class="screen-reader-text" href="#site-main">
         Skip to content
       </a>
@@ -96,7 +96,7 @@ const About = () => {
       ) : (
         <Loading />
       )}
-    </>
+    </div>
   );
 };
 

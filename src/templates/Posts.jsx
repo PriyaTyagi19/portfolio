@@ -20,7 +20,7 @@ const Posts = () => {
           setTimeout( () => {
           
             setLoadStatus(true);
-          }, 100)
+          }, 500)
         } else {
           throw new Error("Failed to fetch data");
         }
@@ -34,7 +34,7 @@ const Posts = () => {
     AOS.init({ duration: 2000 });
   }, [restPath]);
   return (
-    <>
+    <div className="project-page">
       <h1>Works</h1>
       <a class="screen-reader-text" href="#site-main">
         Skip to content
@@ -84,7 +84,7 @@ const Posts = () => {
       ) : (
         <Loading />
       )}
-    </>
+    </div>
   );
 };
 const FeaturedImage = ({ imageId, altText }) => {

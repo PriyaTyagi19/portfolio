@@ -7,7 +7,7 @@ import Slideshow from "../components/Slideshow";
 
 const Post = () => {
   const { slug } = useParams();
-  const restPath = restBase + `portfolio-work?&slug=${slug}`;
+  const restPath = restBase + `portfolio-work?_embed&slug=${slug}`;
   const [restData, setData] = useState([]);
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -27,7 +27,7 @@ const Post = () => {
   }, [restPath]);
 
   return (
-    <>
+    <div className="single-post-page">
       <a className="screen-reader-text" href="#site-main">
         Skip to content
       </a>
@@ -51,7 +51,7 @@ const Post = () => {
               dangerouslySetInnerHTML={{ __html: restData.acf.skillset }}
             ></div>
             <div
-              className="single-work-content"
+              className="work-content"
               dangerouslySetInnerHTML={{ __html: restData.acf.description }}
             ></div>
 
@@ -72,7 +72,7 @@ const Post = () => {
               </a>
             </div>
 
-            <Tabs>
+            <Tabs className="single-page-tabs">
               <TabList>
                 <Tab>
                   <div
@@ -131,7 +131,7 @@ const Post = () => {
       ) : (
         <Loading />
       )}
-    </>
+    </div>
   );
 };
 const FeaturedImage = ({ imageId, altText }) => {
