@@ -5,6 +5,7 @@ import { restBase, featuredImage } from "../utilities/Utilities";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Slideshow from "../components/Slideshow";
 
+
 const Post = () => {
   const { slug } = useParams();
   const restPath = restBase + `portfolio-work?_embed&slug=${slug}`;
@@ -106,6 +107,7 @@ const Post = () => {
                 ></div>
               </TabPanel>
               <TabPanel>
+                
                 <div
                   dangerouslySetInnerHTML={{
                     __html: restData.acf.section2_description,
