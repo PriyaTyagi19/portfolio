@@ -11,6 +11,7 @@ import { Helmet } from "react-helmet-async";
 import { createContext, useState, useEffect } from "react";
 import SunIcon from '../src/components/SunIcon';
 import MoonIcon from '../src/components/MoonIcon';
+import { getYear } from './utilities/date';
 // import ReactSwitch from "react-switch";
 
 
@@ -179,7 +180,7 @@ useEffect(() => {
           </div>
         )}
         <p className="copyright">
-          &copy; <span> 2024 Designed and Developed by Priya Tyagi</span>
+          &copy; <span> {getYear()}  Designed and Developed by Priya Tyagi</span>
         </p>
       </footer>
     </div>
